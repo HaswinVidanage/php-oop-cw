@@ -12,10 +12,8 @@ if($_SESSION['logged_in'] == 2) {  } else { header("Location: login.php"); }
 <head>
 <meta charset="UTF-8">
 <title>Welcome</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/LecView.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
 
@@ -82,8 +80,8 @@ $('#iframediv').load('newSession.php');
 <div class="bs-example">
    <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#sectionA">new session</a></li>
-        <li><a data-toggle="tab" href="#sectionB">select supervisor</a></li>
-          <li><a data-toggle="tab" href="#sectionc">list of supervisees grouped by supervisor</a></li>
+        <li><a data-toggle="tab" href="#">select supervisor</a></li>
+          <li><a data-toggle="tab" href="#">list of supervisees grouped by supervisor</a></li>
         <div class="contatiner">
         <li style="position: absolute;right: 104px;top: 28px;">
             <?php
@@ -92,7 +90,7 @@ $('#iframediv').load('newSession.php');
             ?>
 
         </li>
-        <li style="position: absolute;right: 25px;" onclick="logout()"><button class="btn btn-danger" name="approve" value="insert">Logout</button></li>
+        <li style="position: absolute;right: 25px;" onclick="logout()"><button class="btn btn-red" name="approve" value="insert">Logout</button></li>
         </div>
 
     </ul>
@@ -102,15 +100,6 @@ $('#iframediv').load('newSession.php');
             <div class="content">
 
             <iframe  src="newSession.php" scrolling="auto" style="height:100vw;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin">
-              <p>Your browser does not support iframes.</p>
-            </iframe>
-            </div>
-        </div>
-        <div id="sectionB" class="tab-pane fade not-active">
-
-            <div class="content">
-            <iframe class="not-active" src="selectSupervisor.php" scrolling="auto" style="height:100vw;" sandbox="allow-forms allow-scripts">
-            <!-- 1071px -->
               <p>Your browser does not support iframes.</p>
             </iframe>
             </div>

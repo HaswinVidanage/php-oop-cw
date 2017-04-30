@@ -38,11 +38,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/NewSession.css" />
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
     <title>newSession</title>
 
@@ -79,21 +77,17 @@
   </head>
 
   <body>
-  <div class="container">
-    <div class="col-sm-3"> </div>
-    <div class="col-sm-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">new session</h3>
-        </div>
-        <div class="panel-body">
+  <div class="container" >
+    <div class="column-small"> </div>
+    <div class="column-small">
+        <div class="div">
           <form class="" action="" method="post">
             <fieldset>
-            <div class="form-group">
+            <div class="">
             </div>
-            <div class="form-group">
+            <div class="">
 
-              <div class="col-sm-5">
+              <div class="column-small">
                 <label class='form-control' style="border: none;">
                   Select Student ID
                 </label>
@@ -104,7 +98,7 @@
                $Supervisee = new Supervisee();
                $result = $Supervisee->getAllStudents();
 
-               echo"<div class='form-group col-sm-7'>";
+               echo"<div class='column-small'>";
                echo"<select id='StudentID'  name='StudentID' class='form-control' placeholder='Position'  required='' autofocus onchange='showUser(this.value)' />";
 
                foreach ($result as $key => $res) {
@@ -117,14 +111,14 @@
              <div id="results"><b>Select the Student Id.</b></div>
 
 
-            <div class="col-sm-10"> </div>
-            <div class="col-sm-2"><button type="submit"  class="btn btn-danger btn-md" name="submit">save</button></div>
+            <div class="column-small"> </div>
+            <div class="column-small"><button type="submit"  class="btn btn-red" name="submit">save</button></div>
           </fieldset>
           </form>
         </div>
       </div>
     </div>
-    <div class="col-sm-3"> </div>
+    <div class="column-small"> </div>
   </div>
     </form>
   </body>

@@ -11,10 +11,9 @@ if($_SESSION['logged_in'] == 1) {  } else { header("Location: login.php"); }
 <head>
 <meta charset="UTF-8">
 <title>Welcome</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/StudentView.css" />
+<script src="js/jquery-1.10.2.min.js"></script>
 
 <!-- javascript for iframes and load -->
 <script type="text/javascript">
@@ -81,13 +80,13 @@ if($_SESSION['logged_in'] == 1) {  } else { header("Location: login.php"); }
                 ?>
 
             </li>
-            <li style="position: absolute;right: 25px;" onclick="logout()"><button class="btn btn-danger" name="approve" value="insert">Logout</button></li>
+            <li style="position: absolute;right: 25px;" onclick="logout()"><button class="btn btn-red" name="approve" value="insert">Logout</button></li>
             </div>
 
         </ul>
         <div class="tab-content">
             <div id="sectionA" class="tab-pane fade in active">
-                <div><h3>Previous Session Details</h3> </div>
+                <div><h3 style="margin-left: 575px;">Previous Session Details</h3> </div>
                 <div class="content">
 
                 <iframe  src="lastStdSession.php" scrolling="auto" style="height:100vw;" sandbox="allow-forms allow-scripts">

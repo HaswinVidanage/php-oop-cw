@@ -5,6 +5,7 @@ include_once("classes/Crud.php");
 class Supervisee extends Crud
 {
 	private $student_id = '';
+	private $lecturer_id = '';
 	private $student_name = '';
 	private $student_surname = '';
 
@@ -47,6 +48,23 @@ class Supervisee extends Crud
 		return $result;
 	}
 
+	public function getAllSessions($studentId,$lecturer_id)
+	{
+		$crud = new Crud();
+		$query = "SELECT SES.*,CONCAT(std.fName,' ',std.lName) as Student_FullName,CONCAT(lec.fName,' ',lec.lName) as Lecture_FullName,std.access FROM sessions SES INNER JOIN LOGIN std ON SES.StudentId = std.empId INNER join login lec ON SES.lecId = lec.empId WHERE std.access = 'student' AND std.empId = $studentId AND lecId = $lecturer_id ORDER BY SES.sessionNo DESC";
+
+    $result = $crud->getData($query);
+		return $result;
+	}
+	public function getBasicSessionDetails($studentId)
+	{
+		$crud = new Crud();
+		$query = "SELECT DISTINCT lecId as LecID,SES.StudentId,CONCAT(std.fName,' ',std.lName) as Student_FullName,CONCAT(lec.fName,' ',lec.lName) as Lecture_FullName FROM sessions SES INNER JOIN LOGIN std ON SES.StudentId = std.empId INNER join login lec ON SES.lecId = lec.empId WHERE std.access = 'student' AND std.empId = $studentId ORDER BY lecId DESC";
+
+		//lec.id as Lecture_Id,
+    $result = $crud->getData($query);
+		return $result;
+	}
 
 }
 ?>
