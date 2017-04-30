@@ -5,7 +5,7 @@ if($_SESSION['logged_in'] == 1) {  } else { header("Location: login.php"); }
 
 ?>
 
-
+<!-- This page loads first when a student logs in-->
 <!DOCTYPE html>
 <html lang="en">
 <head>

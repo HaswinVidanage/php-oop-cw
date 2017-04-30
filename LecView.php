@@ -6,31 +6,28 @@ if($_SESSION['logged_in'] == 2) {  } else { header("Location: login.php"); }
 
 ?>
 
-
+<!-- This page is what the Supervisor sees first-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Welcome</title>
 <link rel="stylesheet" type="text/css" href="css/LecView.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
 
+<!-- This javascript code loads newSession.php file first on page load-->
 <script type="text/javascript">
+      $(document).ready(function(){
+          $("#myTab li:eq(1) a").tab('show');
+      });
 
-$(document).ready(function(){
-    $("#myTab li:eq(1) a").tab('show');
-});
-
-
-$(document).ready(function() {
-    $('body iframe').load(function(){
-         $(window).scrollTop(0);
-    });
-});
-
-$('#iframediv').load('newSession.php');
+      $(document).ready(function() {
+          $('body iframe').load(function(){
+               $(window).scrollTop(0);
+          });
+      });
+      $('#iframediv').load('newSession.php');
 </script>
-
 
 <style type="text/css">
         	.bs-example{
@@ -45,6 +42,7 @@ $('#iframediv').load('newSession.php');
           }
 </style>
 
+<!-- This javascript sends data to logout.php-->
 <script type ="text/javascript">
     function logout()
     {
@@ -70,9 +68,7 @@ $('#iframediv').load('newSession.php');
         xmlhttp.open("POST","logout.php",true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send();
-
     }
-
 </script>
 
 </head>
@@ -85,14 +81,13 @@ $('#iframediv').load('newSession.php');
         <div class="contatiner">
         <li style="position: absolute;right: 104px;top: 28px;">
             <?php
-            // Echo session variables that were set on previous page
+            // Echo session variables : username
             echo "<b>Welcome " . $_SESSION["username"] . "</b> <br>";
             ?>
 
         </li>
         <li style="position: absolute;right: 25px;" onclick="logout()"><button class="btn btn-red" name="approve" value="insert">Logout</button></li>
         </div>
-
     </ul>
     <div class="tab-content">
         <div id="sectionA" class="tab-pane fade in active">

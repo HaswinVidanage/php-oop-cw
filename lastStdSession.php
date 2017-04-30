@@ -4,23 +4,21 @@ session_start();
 if($_SESSION['logged_in'] == 1) {  } else { header("Location: login.php"); }
 
 ?>
-
+<!-- This page populates the last session of student under studentView -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Welcome</title>
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
 
 <link rel="stylesheet" type="text/css" href="css/lastSession.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
 
 <body>
 <div class="container">
     <div class="" id="accordion">
 
-		  <?php
+		<?php
 
       $studentId = $_SESSION['empId'];
       include_once("classes/Supervisee.php");

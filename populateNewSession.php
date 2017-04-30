@@ -11,7 +11,7 @@ include_once("classes/ProjectSession.php");
 $supervisee = new Supervisee();
 $result = $supervisee->getStudentName($q);
 
-echo '<div class="col-sm-5">';
+echo '<div class="col-small">';
 echo '  <label class="form-control" style="border: none;"> Supervisee Name </label>';
 echo '</div>';
 
@@ -21,7 +21,7 @@ foreach ($result as $key => $res) {
   echo'</div>';
 }
 
-echo '<div class="col-sm-5">';
+echo '<div class="col-small">';
 echo '  <label class="form-control" style="border: none;"> Supervisor Name </label>';
 echo '</div>';
 echo'<div class="form-group col-sm-7">';
@@ -29,7 +29,7 @@ echo'<input class="form-control" readonly name="supervisorName" id="supervisorNa
 echo'</div>';
 
 
-echo '<div class="col-sm-5">';
+echo '<div class="col-small">';
 echo '  <label class="form-control" style="border: none;"> Session No. </label>';
 echo '</div>';
 
@@ -42,31 +42,31 @@ foreach ($result as $key => $res) {
   echo'</div>';
 }
 
-echo '<div class="col-sm-5">';
+echo '<div class="col-small">';
 echo '  <label class="form-control" style="border: none;"> Session Date </label>';
 echo '</div>';
 $result = $projectSession->getNewSessionDate();
-echo'<div class="form-group col-sm-7">';
+echo'<div class="form-group ">';
 echo'<input class="form-control"   name="date" id="text" type="date" value="'.$result.'">';
 echo'</div>';
 
-echo '<div class="col-sm-5">';
+echo '<div class="col-small">';
 echo '  <label class="form-control" style="border: none;"> Start Time </label>';
 echo '</div>';
 $result = $projectSession->getNewSessionStartTime();
-echo'<div class="form-group col-sm-7">';
+echo'<div class="form-group ">';
 echo'<input class="form-control"  name="startTime" id="startTime" type="time" value="'.$result.'">';
 echo'</div>';
 
-echo '<div class="col-sm-5">';
+echo '<div class="col-small">';
 echo '  <label class="form-control" style="border: none;"> End Time </label>';
 echo '</div>';
 $result = $projectSession->getNewSessionEndTime();
-echo'<div class="form-group col-sm-7">';
+echo'<div class="form-group ">';
 echo'<input class="form-control"  name="endTime" id="endTime" type="time" value="'.$result.'">';
 echo'</div>';
 
-echo '<div class="col-sm-5">';
+echo '<div class="col-small">';
 echo '  <label class="form-control" style="border: none;"> Meeting Notes </label>';
 echo '</div>';
 

@@ -32,7 +32,7 @@ class ProjectSession extends Crud
   public function getNewSessionId()
   {
 		$crud = new Crud();
-    $query = "SELECT (MAX(sessionNo) + 1)  as MaxSessionId FROM sessions";
+    $query = "SELECT COALESCE((MAX(sessionNo) + 1),1)  as MaxSessionId FROM sessions";
     $result = $crud->getData($query);
 		return $result;
   }

@@ -57,7 +57,7 @@ if($_SESSION['logged_in'] == 1) {  } else { header("Location: login.php"); }
               echo'	<div class="panel-body">';
 
               echo"<div>";
-              //populating the jquery accordion from https://jqueryui.com/accordion/
+              //populating the jquery accordion
               echo'<div class="">';
               echo"<table class=' table-responsive table-bordered table-striped table-condensed ' width='400' style='margin-left:250px;' >";
 
@@ -67,7 +67,7 @@ if($_SESSION['logged_in'] == 1) {  } else { header("Location: login.php"); }
 
                  </tr>
                  ";
-
+                 
                 //  echo"<tr><td>Student's Full Name</td><td>".$res['Student_FullName']."</td></tr>";
                 //  echo"<tr><td>Lecture's Full Name </td><td>".$res['Lecture_FullName']."</td></tr>";
                 //  echo"<tr><td>Student ID </td><td>".$res['StudentId']."</td></tr>";

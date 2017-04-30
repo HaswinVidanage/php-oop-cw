@@ -46,9 +46,7 @@
 
     <script>
     $(document).ready(function(){
-
       showUser(1);
-
     });
     </script>
 

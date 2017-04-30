@@ -71,43 +71,38 @@ session_start();
 </script>
 </head>
 <body>
-<div class="container">
-  <div class="col-sm-4"></div>
-  <div class="col-sm-4" style="margin-top: 30px">
-    <div class="login-panel panel panel-default">
-      <div class="panel-heading">
-        <h1 class="panel-title">Login</h1>
-      </div>
-      <div class="panel-body">
-        <form name="form1" action="javascript:void(0);"  onSubmit="verifyLogin();">
-          <fieldset>
-            <div class="form-group">
-              <select  class="form-control" name="taskOption" id="taskOption">
-                <option value="student">Student</option>
-                <option value="lecturer">Lecturer</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <input class="form-control" name="username" id="username" placeholder="Enter your username" type="text" required="" autofocus/>
-            </div>
-            <div class="form-group">
-              <input class="form-control" name="password" id="password" placeholder="Enter your password" type="password" required="" />
-            </div>
+  <div class="container">
+    <div class="col-small"></div>
+    <div class="col-small" style="margin-top: 30px">
+      <div class="login-panel panel panel-default">
+        <div class="panel-heading">
+          <h1 class="panel-title">Login</h1>
+        </div>
+        <div class="panel-body">
+          <form name="form1" action="javascript:void(0);"  onSubmit="verifyLogin();">
+            <fieldset>
+              <div class="form-group">
+                <select  class="form-control" name="taskOption" id="taskOption">
+                  <option value="student">Student</option>
+                  <option value="lecturer">Lecturer</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input class="form-control" name="username" id="username" placeholder="Enter your username" type="text" required="" autofocus/>
+              </div>
+              <div class="form-group">
+                <input class="form-control" name="password" id="password" placeholder="Enter your password" type="password" required="" />
+              </div>
 
-            <button type="submit" class="btn btn-danger" name="submit">Log in</button>
-        </fieldset>
-        </form>
-
-          <div id="myDiv"></div>
+              <button type="submit" class="btn btn-red" name="submit">Log in</button>
+          </fieldset>
+          </form>
+            <div id="myDiv"></div>
+        </div>
       </div>
     </div>
+    <div class="col-small"></div>
   </div>
-  <div class="col-sm-4"></div>
-</div>
-
-
-
-
  </body>
 
 </html>
